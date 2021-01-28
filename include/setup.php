@@ -15,6 +15,26 @@ function mm_after_setup(){
     register_nav_menu('top', 'Menu Superior');
 }
 function mm_widgets(){
+    $mm_sidebar = array(
+        'name' => 'Sidebar Lateral',
+        'id' => 'mm_sidebar',
+        'description' => 'Sidebar Lateral',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widget-title" >',
+        'after_title' => '</h4>'
+    );
+    $mm_footersidebar = array(
+        'name' => 'Sidebar Rodapé',
+        'id' => 'mm_footersidebar',
+        'description' => 'Sidebar Rodapé',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widget-title" >',
+        'after_title' => '</h4>'
+    );
+    register_sidebar($mm_sidebar);
+    register_sidebar($mm_footersidebar);
 
 }
 
