@@ -4,6 +4,9 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-8 maincontent">
+
+                <h1><?php the_archive_title(); ?></h1>
+
                 <?php if(have_posts()): ?>
                     <?php while(have_posts()): ?>
                         <?php the_post(); ?>
